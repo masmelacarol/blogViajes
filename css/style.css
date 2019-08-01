@@ -1,0 +1,267 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%/* 1rem = 10px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+h2 {
+    color: #ffa500;
+    font-size: 2.6rem;
+    margin-bottom: 4rem;
+}
+
+
+/*Botones*/
+
+.boton {
+    display: block;
+    background-color: #ffa500;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 1rem;
+    transition: background-color .3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #b88e42;
+}
+
+@media (min-width:768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+
+.contenedor {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/*Menu Responsivo*/
+
+.barra {
+    overflow: hidden;
+}
+
+.menu-movil {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    padding: 2rem 0;
+    transition: .8s;
+}
+
+#nav:target {
+    max-height: 80rem;
+}
+
+.navegacion-principal {
+    max-height: 0;
+    transition: .8s;
+}
+
+@media (min-width:768px) {
+    .navegacion-principal {
+        max-height: unset;
+    }
+    .menu-movil,
+    .cerrar {
+        display: none !important;
+    }
+}
+
+
+/*Inicio*/
+
+.inicio {
+    padding: 2rem 0;
+}
+
+.barra {
+    background-color: #059dc0;
+    margin-top: 4rem;
+}
+
+.navegacion-principal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (min-width:768px) {
+    .navegacion-principal a {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+}
+
+.navegacion-principal a:hover {
+    background-color: #ffa500;
+    font-size: 2rem;
+}
+
+
+/*Main*/
+
+.contenido-principal {
+    margin-top: 4rem;
+}
+
+@media (min-width:768px) {
+    .contenido-principal {
+        width: 70%;
+        float: left;
+        padding-right: 6rem;
+    }
+    .barra-lateral {
+        width: calc(30% - 4rem);
+        float: left;
+        margin-top: 4rem;
+    }
+}
+
+.entrada-blog {
+    margin-bottom: 6rem;
+}
+
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+
+.entrada-blog img {
+    display: block;
+}
+
+@media (min-width:480px) {
+    .entrada-blog img {
+        width: 30rem;
+        display: block;
+        float: left;
+        margin: 0 3rem 0 0;
+    }
+}
+
+.entrada-blog p {
+    text-align: justify;
+}
+
+
+/* Otros Post */
+
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.barra-lateral ul li {
+    margin-bottom: 2rem;
+}
+
+.barra-lateral ul li a {
+    color: #ffa500;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.barra-lateral ul li a:hover {
+    background-color: #ffa500;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    display: block;
+}
+
+
+/*Pie de Página*/
+
+.pie-pagina {
+    background-color: #059dc0;
+    padding-top: 4rem;
+    margin-top: 6rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.pie-pagina h2 {
+    color: #ffffff;
+}
+
+.pie-pagina a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-right: 2rem;
+}
+
+.pie-pagina a:last-of-type {
+    margin-right: 0;
+}
+
+.pie-pagina a:hover {
+    background-color: #ffa500;
+    padding: 1rem 3rem;
+}
+
+.pie-pagina .menu {
+    padding-bottom: 4rem;
+}
+
+@media (min-width:768px) {
+    .pie-pagina .nosotros {
+        float: left;
+        width: 30%;
+        text-align: left;
+    }
+    .pie-pagina .menu {
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+}
+
+
+/*Copyright*/
+
+.copyright {
+    background-color: #18758a;
+    margin: 0 0 0;
+    padding: 2rem;
+    text-align: center;
+    color: #ffffff;
+}
